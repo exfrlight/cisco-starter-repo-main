@@ -1,26 +1,46 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import './Exhibit.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          ofcourse
-        </p>
-        <a
+      <Banner />
+      <Exhibit name="Welcome to the new world">
+      <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+        Learn React
         </a>
-      </header>
+      </Exhibit>
     </div>
   );
+}
+
+class Banner extends React.Component{
+  render(){
+    return (
+    <div className='Banner'>
+      <h1>Sextant</h1>
+    </div>
+    )
+  }
+}
+class Exhibit extends React.Component{
+  render(){
+    return(
+      <div className='Exhibit'>
+        <h2 className='ExhibitHeading'>{this.props.name}</h2>
+        <div className='ExhibitContent'>
+          {this.props.children}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
