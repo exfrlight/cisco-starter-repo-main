@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
 import './Exhibit.css';
+import Address from './Address.js';
 
 
 function App() {
   return (
     <div className="App">
       <Banner />
-      <Exhibit name="Welcome to the new world">
-      <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        Learn React
-        </a>
+      <Exhibit name="ipv4 address">
+        <Address url="https://api.ipify.org?format=json" />
+      </Exhibit>
+      <Exhibit name="ipv6 address">
+        <Address url="https://api64.ipify.org?format=json" />  
       </Exhibit>
     </div>
   );
@@ -42,5 +39,7 @@ class Exhibit extends React.Component{
     );
   }
 }
+
+
 
 export default App;
