@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './Exhibit.css';
 import Address from './Address.js';
+import PylonConnector from './PylonConnector';
 
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
       </Exhibit>
       <Exhibit name="ipv6 address">
         <Address url="https://api64.ipify.org?format=json" />  
+      </Exhibit>
+      <Exhibit name="Pylon Packet Latency">
+        <PylonConnector />
       </Exhibit>
     </div>
   );
